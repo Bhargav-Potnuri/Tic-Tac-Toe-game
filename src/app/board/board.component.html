@@ -1,0 +1,7 @@
+<div class="board">
+    <app-square
+    *ngFor="let square of squares; let i =index"
+    [value]="square"
+    (squareBox)="onClick(i)">
+</app-square>
+</div>

@@ -1,0 +1,23 @@
+<h1 style="font-style: bolder; font-size: large">Tic Tac Toe</h1>
+<p>
+  Next Player:{{
+    isFirstPlayerNext ? "isFirstPlayer (X)" : "isSecondPlayer(O)"
+  }}
+</p>
+<app-board [squares]="squares" (checkBox)="handleMove($event)"></app-board>
+<div class="game-info mt-10">
+  <p *ngIf="winner">
+    {{ winner === "Draw" ? "Its is a Draw!" : winner + "Wins!" }}
+  </p>
+  <div>
+    <p style="font-style: bolder; color: brown; font-size: large">
+      isFirstPlayer:{{ score.isFirstPlayer }}
+    </p>
+    <p style="font-style: bolder; color: red; font-size: large">
+      isSecondPlayer:{{ score.isSecondPlayer }}
+    </p>
+  </div>
+  <div class="reset">
+    <button class="outline-secondary" (click)="resetGame()">Reset</button>
+  </div>
+</div>

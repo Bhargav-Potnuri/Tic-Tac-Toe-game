@@ -1,0 +1,10 @@
+.game {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: aqua;
+  align-items: center;
+}
+.game-info {
+  text-align: center;
+}
